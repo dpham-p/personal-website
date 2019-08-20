@@ -1,0 +1,142 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: RobotoThin;
+  src: url('../fonts/Roboto-Thin.ttf');
+}
+@font-face {
+  font-family: RobotoLight;
+  src: url('../fonts/Roboto-Light.ttf');
+}
+@font-face {
+  font-family: RobotoRegular;
+  src: url('../fonts/Roboto-Regular.ttf');
+}
+@font-face {
+  font-family: RobotoBold;
+  src: url('../fonts/Roboto-Bold.ttf');
+}
+@font-face {
+  font-family: RobotoBlack;
+  src: url('../fonts/Roboto-Black.ttf');
+}
+
+body {
+  font-family: RobotoRegular;
+  font-size: 100%;
+}
+
+.home {
+  color: white;
+  background: #36809f;
+}
+
+nav {
+  min-height: 10vh;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 2em;
+  width: 30%;
+}
+
+li:hover {
+  text-decoration: underline;
+}
+
+.logo {
+  font-size: 64px;
+}
+
+.page {
+  min-height: 90vh;
+  display: grid;
+  grid-template-columns: 5% 1fr 1fr 1fr 5%;
+}
+
+.hero {
+  align-self: center;
+  justify-self: center;
+  grid-column: 4/5;
+}
+
+.model {
+  width: 125%;
+  height: auto;
+  transform: translate(-25%, -5%);
+}
+
+.description {
+  grid-column: 2/4;
+  align-self: center;
+}
+
+.firstName {
+  font-family: RobotoBold;
+  font-size: 1500%;
+  line-height: 0.8;
+}
+
+.lastName {
+  font-family: RobotoBlack;
+  font-size: 2000%;
+  line-height: 0.8;
+}
+
+hr {
+  width: 25%;
+  height: 1em;
+  background-color: #f8c532;
+  border: none;
+  margin: 1em 1em;
+}
+
+.job {
+  color: #f8c532;
+  font-family: RobotoThin;
+  font-size: 400%;
+  padding-left: 0.2em;
+}
+
+.featured {
+  background-color: #2b7797;
+}
+
+.featured h1 {
+  align-self: flex-start;
+  justify-self: center;
+  grid-column: 3/4;
+  font-size: 4em;
+  padding: 1em 0;
+}
+
+.contact {
+  background-color: #1e3653;
+}
+
+.contact h1 {
+  align-self: flex-end;
+  justify-self: center;
+  grid-column: 2/5;
+  font-size: 9em;
+}
+
+.contact h3 {
+  justify-self: center;
+  grid-column: 3/4;
+  font-size: 4em;
+}
