@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-size: 100%;
 }
 @font-face {
   font-family: RobotoThin;
@@ -28,7 +29,6 @@
 
 body {
   font-family: RobotoRegular;
-  font-size: 100%;
 }
 
 .home {
@@ -51,7 +51,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   font-size: 2em;
-  width: 30%;
+  width: 40%;
 }
 
 li:hover {
@@ -59,7 +59,7 @@ li:hover {
 }
 
 .logo {
-  font-size: 64px;
+  font-size: 4em;
 }
 
 .page {
@@ -120,7 +120,7 @@ hr {
   align-self: flex-start;
   justify-self: center;
   grid-column: 3/4;
-  font-size: 4em;
+  font-size: 3em;
   padding: 1em 0;
 }
 
@@ -128,15 +128,77 @@ hr {
   background-color: #1e3653;
 }
 
-.contact h1 {
-  align-self: flex-end;
+.contactInfo {
+  align-self: center;
   justify-self: center;
   grid-column: 2/5;
-  font-size: 9em;
+  font-size: 5em;
+  text-align: center;
 }
 
-.contact h3 {
-  justify-self: center;
-  grid-column: 3/4;
-  font-size: 4em;
+.contactInfo h3 {
+  font-size: 3rem;
+  font-family: RobotoLight;
+}
+
+@media (max-width: 1000px) {
+  .logo {
+    font-size: 2em;
+  }
+
+  .nav-links {
+    font-size: 1em;
+    width: 60%;
+  }
+
+  .page {
+    grid-template-columns: 5% 1fr 5%;
+  }
+
+  .hero {
+    grid-column: 2/3;
+  }
+
+  .description {
+    grid-column: 2/3;
+    justify-content: center;
+  }
+
+  .firstName {
+    font-size: 20vw;
+  }
+  .lastName {
+    font-size: 25vw;
+  }
+
+  hr {
+    height: 0.5em;
+    margin: 0.5em 0.5em;
+  }
+
+  .job {
+    font-size: 4vw;
+  }
+
+  .model {
+    width: 200px;
+    height: auto;
+    transform: translate(0, 0);
+  }
+
+  .featured h1 {
+    grid-column: 2/3;
+    font-size: 4vw;
+  }
+
+  .contactInfo {
+    grid-column: 2/3;
+  }
+  .contactInfo h1 {
+    font-size: 8vw;
+  }
+
+  .contactInfo h3 {
+    font-size: 5vw;
+  }
 }
