@@ -28,13 +28,28 @@
   src: url('../fonts/Roboto-Black.ttf');
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: RobotoRegular;
+}
+
+main {
+  background-color: #1d324d;
 }
 
 .home {
   color: white;
   background: #36809f;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  background-color: #36809f;
+  z-index: 1;
 }
 
 nav {
@@ -70,6 +85,13 @@ a:active {
   text-decoration: underline;
 }
 
+.anchor {
+  display: block;
+  height: 10vh; /* this is the height of your header */
+  margin-top: -10vh; /* this is again negative value of the height of your header */
+  visibility: hidden;
+}
+
 .logo {
   font-family: RobotoBlack;
   font-size: 4em;
@@ -77,6 +99,7 @@ a:active {
 }
 
 .logo a {
+  color: white;
   text-decoration: none;
 }
 
@@ -84,6 +107,11 @@ a:active {
   min-height: 90vh;
   display: grid;
   grid-template-columns: 5% 1fr 1fr 1fr 5%;
+}
+
+.character {
+  background: #36809f;
+  top: 10vh;
 }
 
 .hero {
@@ -131,7 +159,7 @@ hr {
   padding-left: 0.2em;
 }
 
-.featured {
+.work {
   background-color: #2b7797;
 }
 
@@ -149,12 +177,12 @@ hr {
 
 .works div {
   display: grid;
-  background-color: lightgray;
   width: 75vw;
   height: 50vh;
 }
 
-.works div > h3 {
+.works h3 {
+  color: black;
   align-self: center;
   justify-self: center;
 }
@@ -188,6 +216,94 @@ svg {
   width: 20px;
 }
 
+.card {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 15px;
+  background-color: #f9faf9;
+  padding: 2em 2em;
+}
+
+.work-details {
+  justify-content: center;
+}
+
+.story {
+  min-height: 90vh;
+  width: 75%;
+  margin: auto;
+  padding: 6em 0;
+  color: black;
+}
+
+.story-description {
+  width: 50%;
+}
+.story-description h1 {
+  font-family: RobotoBold;
+  font-size: 4em;
+  padding: 2rem 0;
+}
+
+.story-description p {
+  padding: 1rem 0;
+}
+
+.profile {
+  width: 40%;
+  align-self: center;
+  justify-self: center;
+}
+.profile img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  align-self: center;
+  justify-items: center;
+}
+
+.experience {
+  background-color: #f8f6f4;
+  color: black;
+}
+
+.history {
+  padding: 5em 0;
+  grid-column: 2/5;
+}
+
+.history h1 {
+  font-family: RobotoBold;
+  font-size: 3em;
+  text-align: center;
+  padding: 2em 0;
+}
+
+.history-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2em 0;
+}
+
+.history-image {
+  justify-self: center;
+  align-self: center;
+}
+
+.history-image img {
+  width: 250px;
+  height: 250px;
+}
+
+.history-content {
+  padding: 0 3em;
+}
+
+.history-content ul {
+  width: 30vw;
+  padding: 1em 1em;
+}
 @media (max-width: 1000px) {
   .logo {
     font-size: 2em;
@@ -253,5 +369,37 @@ svg {
 
   .contactInfo h3 {
     font-size: 5vw;
+  }
+
+  .card {
+    flex-direction: column-reverse;
+  }
+  .story {
+    padding: 2em 0;
+  }
+
+  .story-description {
+    width: 100%;
+  }
+
+  .story-description h1 {
+    font-size: 3em;
+    padding: 1rem 0;
+  }
+
+  .profile {
+    width: 100%;
+  }
+  .profile img {
+    width: 100%;
+    height: auto;
+  }
+
+  .history-item {
+    flex-direction: column;
+  }
+
+  .history-content ul {
+    width: 100%;
   }
 }
