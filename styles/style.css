@@ -144,7 +144,7 @@ a:active {
   line-height: 0.8;
 }
 
-hr {
+.name-rule {
   width: 25%;
   height: 1em;
   background-color: #f8c532;
@@ -159,11 +159,22 @@ hr {
   padding-left: 0.2em;
 }
 
+.card {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 15px;
+  background-color: #f9faf9;
+  padding: 1em 1em;
+}
+
 .work {
   background-color: #2b7797;
 }
 
 .works {
+  display: grid;
+  width: 74vw;
+  height: auto;
   align-self: flex-start;
   justify-self: center;
   grid-column: 2/5;
@@ -175,57 +186,21 @@ hr {
   padding: 1em 0;
 }
 
-.works div {
-  display: grid;
-  width: 75vw;
-  height: 50vh;
-}
-
 .works h3 {
   color: black;
   align-self: center;
   justify-self: center;
 }
 
-.contact {
-  background-color: #1e3653;
-}
-
-.contactInfo {
-  align-self: center;
-  justify-self: center;
-  grid-column: 2/5;
-  font-size: 5em;
-  text-align: center;
-}
-
-.contactInfo ul {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  list-style-type: none;
-}
-
-svg {
-  color: white;
-  width: 25px;
-  height: auto;
-}
-
-.fa-facebook-f {
-  width: 20px;
-}
-
-.card {
-  display: flex;
-  justify-content: space-between;
-  border-radius: 15px;
-  background-color: #f9faf9;
-  padding: 2em 2em;
-}
-
 .work-details {
   justify-content: center;
+  align-items: center;
+  background-color: #ef9e22;
+}
+
+.work-image {
+  width: 600px;
+  height: auto;
 }
 
 .story {
@@ -304,6 +279,49 @@ svg {
   width: 30vw;
   padding: 1em 1em;
 }
+
+.contact {
+  background-color: #1e3653;
+}
+
+.contactInfo {
+  align-self: center;
+  justify-self: center;
+  grid-column: 2/5;
+  font-size: 5em;
+  text-align: center;
+}
+
+.contactInfo ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  list-style-type: none;
+}
+
+svg {
+  color: white;
+  width: 25px;
+  height: auto;
+}
+
+.fa-facebook-f {
+  width: 20px;
+}
+
+.mySlides {
+  display: none;
+}
+.w3-left,
+.w3-right,
+.w3-badge {
+  cursor: pointer;
+}
+.w3-badge {
+  height: 13px;
+  width: 13px;
+  padding: 0;
+}
 @media (max-width: 1000px) {
   .logo {
     font-size: 2em;
@@ -351,13 +369,14 @@ svg {
 
   .works {
     grid-column: 2/3;
+    height: auto;
   }
   .works h1 {
     font-size: 6vw;
   }
 
-  .works div {
-    transform: translate(0, 15%);
+  .works {
+    transform: translate(0, 0%);
   }
 
   .contactInfo {
@@ -374,6 +393,10 @@ svg {
   .card {
     flex-direction: column-reverse;
   }
+
+  .work-details {
+  }
+
   .story {
     padding: 2em 0;
   }
