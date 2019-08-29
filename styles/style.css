@@ -49,7 +49,7 @@ header {
   position: sticky;
   top: 0;
   background-color: #36809f;
-  z-index: 1;
+  z-index: 2;
 }
 
 nav {
@@ -172,34 +172,55 @@ a:active {
 }
 
 .works {
-  display: grid;
-  width: 74vw;
-  height: auto;
-  align-self: flex-start;
-  justify-self: center;
   grid-column: 2/5;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   font-size: 3em;
-  text-align: center;
 }
 
 .works h1 {
+  width: 100%;
   padding: 1em 0;
+  text-align: center;
 }
 
-.works h3 {
-  color: black;
-  align-self: center;
-  justify-self: center;
+.work-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #ef9e22;
+  width: 85%;
+  height: 90vh;
+  margin-bottom: 2em;
 }
 
-.work-details {
+.work-item {
+  position: absolute;
   justify-content: center;
   align-items: center;
-  background-color: #ef9e22;
+}
+
+.work-item-middle {
+  z-index: 1;
+}
+
+.work-item-left {
+  max-width: 600px;
+  transform: translate(-100%, 0);
+}
+
+.work-item-right {
+  max-width: 600px;
+  transform: translate(100%, 0);
 }
 
 .work-image {
-  width: 600px;
+  width: 100%;
+  max-width: 1200px;
   height: auto;
 }
 
@@ -309,19 +330,6 @@ svg {
   width: 20px;
 }
 
-.mySlides {
-  display: none;
-}
-.w3-left,
-.w3-right,
-.w3-badge {
-  cursor: pointer;
-}
-.w3-badge {
-  height: 13px;
-  width: 13px;
-  padding: 0;
-}
 @media (max-width: 1000px) {
   .logo {
     font-size: 2em;
@@ -379,6 +387,24 @@ svg {
     transform: translate(0, 0%);
   }
 
+  .work-container {
+    height: 30vh;
+  }
+
+  .work-item {
+  }
+
+  .work-item-left {
+    display: none;
+  }
+
+  .work-item-right {
+    display: none;
+  }
+
+  .work-image {
+  }
+
   .contactInfo {
     grid-column: 2/3;
   }
@@ -392,9 +418,6 @@ svg {
 
   .card {
     flex-direction: column-reverse;
-  }
-
-  .work-details {
   }
 
   .story {
