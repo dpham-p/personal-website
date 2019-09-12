@@ -34,20 +34,15 @@ function showDivs(n) {
     slideIndex = x.length;
   }
   for (let i = 0; i < x.length; i++) {
-    x[i].className = x[i].className.replace(' w3-animate-left', '');
-    x[i].className = x[i].className.replace(' work-item-middle', '');
-    x[i].className = x[i].className.replace(' work-item-left', '');
-    x[i].className = x[i].className.replace(' work-item-right', '');
+    x[i].style.display = 'none';
   }
 
-  x[slideIndex - 1].className += ' work-item-middle';
+  x[slideIndex - 1].style.display = 'block';
   x[slideIndex - 1].addEventListener('mouseover', pauseDiv);
   x[slideIndex - 1].addEventListener('mouseout', unpauseDiv);
-  x[slideIndex % 3].className += ' work-item-left';
-  x[(slideIndex + 1) % 3].className += ' work-item-right';
 }
 
 function carousel() {
-  setTimeout(carousel, 5000);
+  setTimeout(carousel, 10000);
   if (!pause) plusDivs(1);
 }
